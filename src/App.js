@@ -5,7 +5,7 @@ import "./components/TodoComponents/Todo.css";
 
 const todos = [
   { task: "Learn Coding", id: 1567651125333, completed: false },
-  { task: "Build Enterprise Application", id: 1567651213529, completed: false },
+  { task: "Build App", id: 1567651213529, completed: false },
   { task: "Defeat Zuckerberg", id: 1567651223566, completed: false },
   { task: "Takeover Earth", id: 1567651231400, completed: false }
 ];
@@ -30,6 +30,7 @@ class App extends React.Component {
 
   handleSubmit = (e, itemName) => {
     e.preventDefault();
+    if (itemName === "") return;
     this.setState({
       todos: [
         ...this.state.todos,
@@ -49,8 +50,8 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="main-container">
+        <h2>Things To Do:</h2>
         <TodoForm handleSubmit={this.handleSubmit} />
         <TodoList
           todos={this.state.todos}

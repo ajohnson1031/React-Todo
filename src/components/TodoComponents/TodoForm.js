@@ -29,7 +29,7 @@ class TodoForm extends React.Component {
           value={this.state.itemName}
         />
         <button type="submit" name="submit">
-          Add Item
+          Add +
         </button>
       </form>
     );
