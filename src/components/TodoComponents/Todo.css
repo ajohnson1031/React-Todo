@@ -1,0 +1,27 @@
+.todo-item {
+  width: 150px;
+  padding: 17.5px 10px;
+  text-align: center;
+  background-color: dodgerblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.todo-item:hover {
+  background-color: lightskyblue;
+}
+
+.completed {
+  background-color: slategrey;
+  text-decoration: line-through;
+  text-decoration-color: red;
+  opacity: 0.5;
+}
+
+.completed:hover {
+  background-color: slategray;
+}
